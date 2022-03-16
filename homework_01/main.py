@@ -3,6 +3,7 @@
 Функции и структуры данных
 """
 
+
 def is_prime(number):
 
     # Python program to check if
@@ -18,7 +19,6 @@ def is_prime(number):
             # 2 and n / 2, it is not prime
             if (number % i) == 0:
                 return False
-                break
         else:
             return True
 
@@ -53,12 +53,13 @@ def filter_numbers(numbers, filter_type):
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
-    if filter_type == 'even':
+
+    if filter_type == EVEN:
         return [i for i in numbers if i % 2 == 0]
-    if filter_type == 'odd':
+    if filter_type == ODD:
         return [i for i in numbers if i % 2 == 1]
-    if filter_type == 'prime':
-        return [i for i in filter(is_prime, numbers)]
+    if filter_type == PRIME:
+        return list(filter(is_prime, numbers))
 
 
 list_numbers = filter_numbers([1, 2, 3], ODD)
