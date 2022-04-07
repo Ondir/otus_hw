@@ -4,9 +4,9 @@ from exceptions import LowFuelError
 
 class Vehicle(ABC):
     def __init__(self, started, weight=0, fuel=0, fuel_consumption=0):
-        self.weight = weight
-        self.fuel = fuel
-        self.fuel_consumption = fuel_consumption
+        self.weight = int(weight)
+        self.fuel = int(fuel)
+        self.fuel_consumption = int(fuel_consumption)
         self.started = started
 
     def start(self):
