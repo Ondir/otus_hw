@@ -3,13 +3,15 @@ from exceptions import LowFuelError
 
 
 class Vehicle(ABC):
-    def __init__(self, weight, fuel, fuel_consumption):
+    def __init__(self, started, weight=0, fuel=0, fuel_consumption=0):
         self.weight = int(weight)
         self.fuel = int(fuel)
         self.fuel_consumption = int(fuel_consumption)
+        self.started = started
 
     def start(self):
         if not self.started and self.fuel > 0:
+
             self.started = True
             raise LowFuelError()
 
