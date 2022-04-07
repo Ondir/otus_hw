@@ -13,14 +13,16 @@ class Vehicle(ABC):
         if self.started:
             pass
         elif self.fuel > 0:
+            self.started = True
             raise LowFuelError()
 
-    def move(self):
-        distance = self.fuel//self.fuel_consumption
-        return distance
+    def move(self, distance):
+         max_distance = self.fuel // self.fuel_consumption
+         expected = self.fuel - max_distance * self.fuel_consumption
+
 
     def __str__(self):
-        return     
+        return
 
 
 first_test = Vehicle(False, 10, 2, 10)
