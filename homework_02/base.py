@@ -4,9 +4,9 @@ from exceptions import LowFuelError, NotEnoughFuel
 
 class Vehicle(ABC):
     started = False
-    weight = 10
-    fuel = 20
-    fuel_consumption = 5
+    weight = 20
+    fuel = 70
+    fuel_consumption = 4
 
     def __init__(self, weight=weight, fuel=fuel, fuel_consumption=fuel_consumption):
         self.weight = weight
@@ -21,8 +21,8 @@ class Vehicle(ABC):
             raise LowFuelError(self.started)
 
     def move(self, distance):
-         max_distance = self.fuel // self.fuel_consumption
-         if max_distance<=distance:
+        max_distance = self.fuel // self.fuel_consumption
+        if max_distance <= distance:
             expected = self.fuel - distance * self.fuel_consumption
-            self.fuel=expected
-            raise NotEnoughFuel(max_distance)
+            self.fuel = expected
+        raise NotEnoughFuel()
