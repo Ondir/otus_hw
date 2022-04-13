@@ -7,7 +7,7 @@ from exceptions import CargoOverload
 
 
 class Plane(Vehicle):
-    cargo = 3
+    cargo = 0
     max_cargo = 80
 
     def __init__(self, weight, fuel, fuel_consumption, max_cargo=max_cargo):
