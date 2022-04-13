@@ -1,12 +1,12 @@
-def LowFuelError():
+class LowFuelError:
     pass
 
 
-def NotEnoughFuel():
+class NotEnoughFuel:
     pass
 
 
-def CargoOverload():
+class CargoOverload:
     pass
 
 """
