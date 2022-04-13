@@ -25,4 +25,5 @@ class Vehicle(ABC):
         if max_distance >= distance:
             expected = self.fuel - distance * self.fuel_consumption
             self.fuel = expected
-        raise NotEnoughFuel()
+        elif max_distance < distance:
+            raise NotEnoughFuel()
