@@ -21,9 +21,8 @@ class Vehicle(ABC):
             raise LowFuelError()
 
     def move(self, distance):
-         max_distance = self.fuel // self.fuel_consuption
+         max_distance = self.fuel // self.fuel_consumption
          if max_distance<=distance:
             expected = self.fuel - distance * self.fuel_consumption
             self.fuel=expected
-         else:
-             raise NotEnoughFuel()
+            raise NotEnoughFuel()
