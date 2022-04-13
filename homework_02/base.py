@@ -18,8 +18,8 @@ class Vehicle(ABC):
             if self.fuel > 0:
                 self.started = True
                 return
-            elif self.fuel==0:
-                raise LowFuelError(self.started)
+            elif self.fuel == 0:
+                raise LowFuelError()
 
     def move(self, distance):
         max_distance = self.fuel // self.fuel_consumption
