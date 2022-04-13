@@ -6,8 +6,7 @@ from engine import Engine
 
 
 class Car(Vehicle):
-    def __init__(self, engine):
-        self.engine = Engine()
+    engine = 0
 
     def set_engine(self, engine):
         self.engine = engine
