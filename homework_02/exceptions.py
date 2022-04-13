@@ -1,13 +1,13 @@
-class LowFuelError:
-    pass
+class LowFuelError(Exception):
+    print("LowFuelError")
 
 
-class NotEnoughFuel:
-    pass
+class NotEnoughFuel(Exception):
+    print("NotEnoughFuel")
 
 
-class CargoOverload:
-    pass
+class CargoOverload(Exception):
+    print("CargoOverload")
 
 """
 Объявите следующие исключения:
