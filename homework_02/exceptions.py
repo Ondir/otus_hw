@@ -1,12 +1,12 @@
-class LowFuelError(Exception):
+def LowFuelError(Exception):
     print("LowFuelError")
 
 
-class NotEnoughFuel(Exception):
+def NotEnoughFuel(Exception):
     print("NotEnoughFuel")
 
 
-class CargoOverload(Exception):
+def CargoOverload(Exception):
     print("CargoOverload")
 
 """
